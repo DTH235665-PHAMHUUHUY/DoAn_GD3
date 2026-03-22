@@ -191,6 +191,7 @@ namespace QuanLyVatLieuXayDung.Forms
             if (MessageBox.Show("Xác nhận xóa sản phẩm " + txtTenVatLieu.Text + "?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 id = Convert.ToInt32(dgvVatLieu.CurrentRow.Cells["ID"].Value.ToString());
+
                 VatLieu sp = context.VatLieu.Find(id);
                 if (sp != null)
                 {
